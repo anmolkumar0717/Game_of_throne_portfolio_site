@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Kablammo&family=Lacquer&family=Oxanium:wght@200..800&family=Silkscreen:wght@400;700&family=Sofadi+One&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&family=Roboto+Slab:wght@100..900&family=Satisfy&display=swap');
+
+body {
+    margin: 0;
+    overflow: hidden;
+
+  }
+  
+  .overlay{
+    opacity:1;
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    pointer-events:none;
+    transition: opacity 1s;
+}
+
+.overlay.fade{
+    opacity:0;
+}
+
+.loading{
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(119, 4, 4);
+    background-color: transparent;
+    font-size: 4rem;
+    font-family: "Lacquer", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    opacity: 1;
+    font-size: 3.9rem;
+    transition: opacity 1s;
+    filter: drop-shadow(3px 3px 3px rgb(0, 0, 0));
+    
+}
+
+.loading.fade {
+    opacity: 0;
+}
+
+.start{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    color: rgb(119, 4, 4);
+    background-color: transparent;
+    font-size: 3rem;
+    font-family: "Lacquer", system-ui;
+    font-style: normal;
+    opacity: 0;
+    transition: opacity 0.5s;
+    display: none;
+    filter: drop-shadow(3px 3px 3px rgb(0, 0, 0));
+}
+
+.start.fadeIn{
+    opacity:1;
+}
+
+.start.fadeOut{
+    opacity:0;
+}
+  
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.card-container {
+  position: fixed;
+  left: 25%;
+  bottom: 50%;
+  text-align: center;
+  width: 450px;
+  height: 300px;
+  transition: transform 0.4s ease-out;
+}
+.card-container.active {
+  transform: translate(-50%, 0%);
+}
+.card-container img{
+  height: 220px;
+  width: 220px;
+}
+
+.banner {
+  width: 100%;
+  height: 350px;
+  border-radius: 12px;
+  margin-bottom: -50px;
+  z-index: 1;
+  position: relative;
+}
+.rmcs-banner{
+  width: 100%;
+  height: 350px;
+  border-radius: 12px;
+  margin-bottom: -50px;
+  z-index: 1;
+  position: relative;
+}
+
+
+.card {
+    width: 400px;
+    height: 300px;
+  background-color: #1a1a1a;
+  border-radius: 20px;
+  padding: 70px 20px 30px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+  color: rgb(255, 255, 255);
+}
+
+.intro-text {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+    width: 50px;
+  height: 50px;
+  gap: 15px;
+  margin-left: 45%;
+  margin-top: 20px;
+}
+
+.social-icons img {
+  height: 50px;
+  width: 50px;
+  
+  border-radius: 100%;
+  transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+  filter: drop-shadow(3px 3px 3px rgb(255, 255, 255));
+}
+.social-icons img:hover {
+  animation: bounce 0.5s;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+.close_button{
+  margin-top: 25px;
+  cursor: pointer;
+
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  font-family: "Mukta", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: large;
+
+}
+.close_button:hover{
+  transform: scale(1.1);
+  color:white;
+  background-color: rgb(233, 7, 45);
+  filter: drop-shadow(3px 3px 3px rgb(250, 250, 250));
+
+
+}
+
+.rmcs-container{
+  position: fixed;
+  left: 10%;
+  bottom: 50%;
+  text-align: center;
+  width: 450px;
+  height: 300px;
+  transition: transform 0.4s ease-out;
+}
+.rmcs-container.active {
+  transform: translate(-50%, 0%);
+}
+.rmcs-container img{
+  height: 130px;
+  width: 350px;
+}
+
+.got-container{
+  position: fixed;
+  left: 60%;
+  bottom: 50%;
+  text-align: center;
+  width: 420px;
+  height: 300px;
+  transition: transform 0.4s ease-out;
+}
+.got-container img{
+  height: 150px;
+  width: 150px;
+}
+.card1{
+      width: 400px;
+    height: 300px;
+  background-color: transparent;
+  border-radius: 20px;
+  padding: 70px 20px 30px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  color: rgb(255, 255, 255);
+
+}
+.card2{
+    width: 400px;
+    height: 330px;
+    background-color: transparent;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 20px;
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 50px 20px 30px;
+    position: relative;
+    top:-50px;
+
+}
+
+/* h1{
+            background: -webkit-linear-gradient(360deg,#f08f07, #ffffff,green);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+} */
+.close_button1{
+  cursor: pointer;
+    background-color: transparent;
+    border: 0px;
+    position: relative;
+    top: 40px;
+    left: 10px;
+    scale: 1.4;
+
+
+}
+.close_button1:hover{
+  transform: scale(1.5);
+  filter: drop-shadow(3px 3px 3px rgb(0, 0, 0));
+}
+.close_button3{
+cursor: pointer;
+    background-color: transparent;
+    border: 10px;
+    position: relative;
+    top: -10px;
+    left: 120px;
+    scale: 1.4;
+    z-index: 1;
+}
+.solar-container{
+  position: fixed;
+  left: 60%;
+  bottom: 50%;
+  text-align: center;
+  width: 420px;
+  height: 300px;
+  transition: transform 0.4s ease-out;
+
+}
+.solar-container img{
+  height: 240px;
+  width: 240px;
+}
+.solar-banner{
+  width: 100%;
+  height: 350px;
+  border-radius: 12px;
+  margin-bottom: -50px;
+  z-index: 1;
+  position: relative;
+}
+.close_button3:hover{
+  transform: scale(1.5);
+  filter: drop-shadow(3px 3px 3px rgb(0, 0, 0));
+}
+.intro-text1{
+  margin: 0;
+  font-size: 2rem;;
+  font-style: normal;
+  background: -webkit-linear-gradient(360deg,#f08f07, #ffffff,green);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+}
+.main-text{
+  font-size: 1.2rem;
+}
+
+.social-icons1{
+  display: flex;
+  justify-content: center;
+    width: 50px;
+  height: 50px;
+  gap: 15px;
+  margin-left: 45%;
+  margin-top: 20px;
+}
+
+.social-icons1 img {
+  height: 50px;
+  width: 50px;
+  
+  border-radius: 100%;
+  transition: transform 0.3s;
+}
+
+.social-icons1 img:hover {
+  filter: drop-shadow(3px 3px 3px rgb(255, 255, 255));
+}
+.social-icons1 img:hover {
+  animation: bounce 0.5s;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+.Visit{
+  margin-top: 25px;
+  cursor: pointer;
+
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  font-family: "Mukta", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: large;
+  background-color: rgb(12, 147, 225);
+
+}
+.Visit-got{
+  margin-top: 25px;
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  font-family: "Mukta", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: large;
+  background-color: rgb(12, 147, 225);
+  border: 0px;
+}
+
+.Visit-solar{
+  margin-top: 25px;
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  font-family: "Mukta", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: large;
+  background-color: rgb(12, 147, 225);
+  border: 0px;
+
+}
+.Visit-solar:hover{
+  animation: bounce 0.5s;
+  box-shadow: 0 4px 10px rgba(226, 5, 5, 0.107);
+}
+.close_button4{
+  cursor: pointer;
+    background-color: transparent;
+    border: 10px;
+    position: relative;
+    top: -10px;
+    left: 70px;
+    scale: 1.4;
+    z-index: 1;
+
+}
+
+
+.card3{
+   width: 400px;
+    height: 330px;
+    background-color: transparent;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 20px;
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 50px 20px 30px;
+    position: relative;
+    top:-50px;
+
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .start:hover { 
+          background: -webkit-linear-gradient(360deg,#f08f07, #ffffff,green);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        filter: drop-shadow(3px 3px 3px rgb(0, 0, 0));
+    font-size: 3.2rem;
+ }
+  }
+
